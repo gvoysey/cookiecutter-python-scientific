@@ -1,5 +1,4 @@
-{%if cookiecutter.cli_tool == "docopt"%}
-"""{{ cookiecutter.package_name }}.
+{%if cookiecutter.cli_tool == "docopt"%}"""{{ cookiecutter.package_name }}.
 
 Usage:
 {{ cookiecutter.package_name }} -h | --help
@@ -11,7 +10,10 @@ Options:
  --version    Show the version.
 """
 
-from {{ cookiecutter.package_name }} import from_docopt, __version__
+import sys
+from {{ cookiecutter.package_name }}.from_docopt import from_docopt
+from {{ cookiecutter.package_name }} import __version__
+
 
 def main(inputargs=None):
     """Main entry point of {{ cookiecutter.package_name }}"""

@@ -17,9 +17,6 @@ and follow the prompts.
 Then, install the project as follows:
 #+begin_src bash
 cd $OUTPUT_DIR
-git init .
-git add -A
-git commit -m "first commit of my new project!"
 make init
 #+end_src
 

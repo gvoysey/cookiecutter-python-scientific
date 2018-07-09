@@ -11,13 +11,13 @@ Options:
  --version    Show the version.
 """
 
-from docopt import docopt
-
+from {{ cookiecutter.package_name }} import from_docopt, __version__
 
 def main(inputargs=None):
     """Main entry point of {{ cookiecutter.package_name }}"""
     if inputargs is None:
-        input
+        inputargs = sys.argv[1:] if len(sys.argv) > 1 else ""
+    args = from_docopt(argv=inputargs, docstring=__doc__, version=__version__)
 {% elif cookiecutter.cli_tool == "click" %}
 import click
 

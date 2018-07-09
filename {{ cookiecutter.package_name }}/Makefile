@@ -32,3 +32,8 @@ lint :
 	@pipenv run pycodestyle {{ cookiecutter.package_name }} --max-line-length=120
 	@echo "======== PYDOCSTYLE  ======="
 	@pipenv run pydocstyle {{ cookiecutter.package_name }}
+
+clean:
+	@echo "removing virtual environment..."
+	@pipenv --rm
+

@@ -1,9 +1,10 @@
 {
     "full_name": "Graham Voysey",
-    "email": "",
+    "email": "gvoysey@bu.edu",
     "github_username": "gvoysey",
     "project_description": "",
     "project_slug": "",
     "url": "",
-    "project_tagline":""
+    "project_tagline":"",
+    "cli_tool": ["docopt", "click"]
 }

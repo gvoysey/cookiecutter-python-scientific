@@ -1,0 +1,39 @@
+* Introduction
+This is a [[https://cookiecutter.readthedocs.io/][cookiecutter]] template that reflects my current understanding of best
+practices for making rapid python projects for scientific computing and research. 
+
+Out of the box, this template will install a python 3.6+ package with numpy, attrs,
+and docopt installed for command line parsing. 
+
+* Use
+To create a new project, run:
+#+begin_src bash
+OUTPUT_DIR=$HOME/Projects/my-new-project
+cookiecutter gh:cookiecutter gh:gvoysey/cookiecutter-python-scientific -o $OUTPUT_DIR
+#+end_src
+
+and follow the prompts.
+
+Then, install the project as follows:
+#+begin_src bash
+cd $OUTPUT_DIR
+git init .
+git add -A
+git commit -m "first commit of my new project!"
+make init
+#+end_src
+
+and run basic test coverage with:
+#+begin_src bash
+make test
+make lint
+#+end_src
+
+* Features
+This package supports:
+- pytest / hypothesis
+- org-file readmes by default
+- test coverage with coverage.py
+- pipenv integration
+
+This package

@@ -20,19 +20,25 @@ OUTPUT_DIR=$HOME/Projects/my-new-project
 cookiecutter gh:gvoysey/cookiecutter-python-scientific -o $OUTPUT_DIR
 #+end_src
 
-and follow the prompts.
+and follow the prompts. =package_name= is required.
 
 Then, install the project as follows:
 #+begin_src bash
 cd $OUTPUT_DIR
 make init
 #+end_src
+At this point, you can run =pipenv shell= to enter an activated virtual environment.  An entry point into your new python project has already been created -- using the value of =package_name= you created in the wizard, run =package_name --version= and note that while your new package doesn't do anything, it knows what version it is!
 
-and run basic test coverage with:
+Test runners with coverage have been preconfigured.  TO use them, run 
 #+begin_src bash
 make test
+#+end_src
+
+A linter suite has also been preconfigured.  TO use them, run 
+#+begin_src bash
 make lint
 #+end_src
+
 
 * Features
 This package supports:

@@ -1,10 +1,10 @@
 {
-    "project_slug": "",
+    "package_name": "",
+    "project_tagline":"",
+    "project_description": "",
     "full_name": "Graham Voysey",
     "email": "gvoysey@bu.edu",
     "github_username": "gvoysey",
-    "project_description": "",
-    "url": "",
-    "project_tagline":"",
-    "cli_tool": ["docopt", "click"]
+    "url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.package_name }}.git",
+    "cli_tool": ["docopt", "click", "none"]
 }

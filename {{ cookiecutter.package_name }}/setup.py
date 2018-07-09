@@ -3,13 +3,13 @@ import versioneer
 
 
 setup(
-    name='{{ cookiecutter.project_slug }}'
+    name='{{ cookiecutter.package_name }}'
     , packages=find_packages()
     , version=versioneer.get_version()
     , cmdclass=versioneer.get_cmdclass()
     , entry_points={
         'console_scripts': [
-            '{{ cookiecutter.project_slug }} = {{ cookiecutter.project_slug }}.__main__:main'
+            '{{ cookiecutter.package_name }} = {{ cookiecutter.package_name }}.__main__:main'
         ]
     }
     , url='{{ cookiecutter.url }}'

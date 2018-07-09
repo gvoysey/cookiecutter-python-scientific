@@ -1,9 +1,9 @@
 {%if cookiecutter.cli_tool == "docopt"%}
-"""{{ cookiecutter.project_slug }}.
+"""{{ cookiecutter.package_name }}.
 
 Usage:
-{{ cookiecutter.project_slug }} -h | --help
-{{ cookiecutter.project_slug }} --version
+{{ cookiecutter.package_name }} -h | --help
+{{ cookiecutter.package_name }} --version
 
 Options:
 
@@ -14,8 +14,8 @@ Options:
 from docopt import docopt
 
 
-def main(inputargs=None)
-    """Main entry point of {{ cookiecutter.project_slug }}"""
+def main(inputargs=None):
+    """Main entry point of {{ cookiecutter.package_name }}"""
     if inputargs is None:
         input
 {% elif cookiecutter.cli_tool == "click" %}

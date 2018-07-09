@@ -1,5 +1,0 @@
-* Introduction
-{{ cookiecutter.project_slug }} is {{ cookiecutter.project_description }}
-* Use
-* Requirements
-* Installation

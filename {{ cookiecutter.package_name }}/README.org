@@ -1,0 +1,27 @@
+* Introduction
+{{ cookiecutter.package_name }} is {{ cookiecutter.project_description }}. 
+* Use
+* Requirements
+
+{% if cookiecutter.url and 'github' in cookiecutter.url %}
+* Installation
+** From Github
+To obtain the latest version of this package:
+#+begin_src bash
+pip install git+{{ cookiecutter.url }}
+#+end_src
+
+** Development
+If you wish to work on this project locally, clone this repo and install it in
+development mode:
+
+#+begin_src bash
+git clone {{ cookiecutter.url }}
+cd {{ cookiecutter.package_name }}
+make dev
+#+end_src
+
+
+
+{% endif %}
+

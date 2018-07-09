@@ -9,8 +9,8 @@ python_version = '3.6'
 [packages]
 versioneer = "*"
 attrs = "*"
-docopt = "*"
 numpy = "*"
+{% if cookiecutter.cli_tool == "docopt" %}docopt = "*"{% elif cookiecutter.cli_tool == "click" %}click="*"{% endif %}
 
 [dev-packages]
 ipython = "*"

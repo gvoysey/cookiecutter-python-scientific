@@ -18,8 +18,9 @@ setup(
     , description='{{ cookiecutter.project_tagline }}'
     , install_requires=[
                         'attrs'
-                        , 'docopt'
                         , 'numpy'
+                        , 'versioneer'
+                        {% if cookiecutter.cli_tool == "docopt" %}, 'docopt'{% elif cookiecutter.cli_tool == "click" %}, 'click'{% endif %}
                         ]
     , tests_require=[
                      'hypothesis'

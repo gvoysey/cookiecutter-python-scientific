@@ -3,13 +3,13 @@ This is a [[https://cookiecutter.readthedocs.io/][cookiecutter]] template that r
 practices for making rapid python projects for scientific computing and research. 
 
 Out of the box, this template will install a python 3.6+ package with numpy, attrs,
-and docopt installed for command line parsing. 
+and docopt installed for command line parsing.
 
 * Use
 To create a new project, run:
 #+begin_src bash
 OUTPUT_DIR=$HOME/Projects/my-new-project
-cookiecutter gh:cookiecutter gh:gvoysey/cookiecutter-python-scientific -o $OUTPUT_DIR
+cookiecutter gh:gvoysey/cookiecutter-python-scientific -o $OUTPUT_DIR
 #+end_src
 
 and follow the prompts.

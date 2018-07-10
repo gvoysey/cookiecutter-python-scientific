@@ -1,5 +1,6 @@
 import sys
-if sys.version_info[:2] < (3,6):
+MIN_PYTHON_VER = (3,6)
+if sys.version_info < MIN_PYTHON_VER:
     sys.exit('Python 3.6 or later is required!')
 from subprocess import run, CalledProcessError
 

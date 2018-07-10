@@ -3,17 +3,6 @@ all:
 	@echo "\t\`make dev\` to install development version"
 	@echo "\t\`make lint\` to run static typing tests"
 
-init:
-	@echo "initializing development environment for {{ cookiecutter.package_name }}"
-	@pipenv install --dev
-	@git init .
-	@git add -A && git commit -m "first commit of {{ cookiecutter.package_name }}, a {{ cookiecutter.project_tagline }}."
-	@git tag -a -m "first tag" 0.0.1
-	@pipenv run versioneer install
-	@pipenv run pip install -e .
-	@git add -A && git commit -m "added versioneer support."
-	@echo "Finished initialization.  Run pipenv shell to enter an activated virtual environment, make test to run tests, make lint to run linters."
-
 dev :
 	@pipenv install --dev
 	@pipenv run pip install -e .

@@ -18,20 +18,18 @@ This cookiecutter template expects you to have, and wish to use:
 To create a new project, run:
 
 #+begin_src bash
-OUTPUT_DIR=.
-cookiecutter gh:gvoysey/cookiecutter-python-scientific -o $OUTPUT_DIR  #creates in the current working directory
+# creates a new directory in the current directory
+cookiecutter gh:gvoysey/cookiecutter-python-scientific -o .
 #+end_src
 
 and follow the prompts. The =package_name= option is required, and will be the name of
 your new python package (and created directory).
 
-Then, install the project as follows:
-#+begin_src bash
-cd $OUTPUT_DIR/package_name
-make init
-#+end_src
-
-At this point, you can run =pipenv shell= to enter an activated virtual environment.  An entry point into your new python project has already been created -- using the value of =package_name= you created in the wizard, run =package_name --version= and note that while your new package doesn't do anything, it knows what version it is!
+At this point, you can now =cd= to your new project, and run =pipenv shell= to enter an
+activated virtual environment.  An entry point into your new python project has
+already been created -- using the value of =package_name= you created in the wizard,
+run =package_name --version= and note that while your new package doesn't do anything,
+it knows what version it is!
 
 Test runners with coverage have been preconfigured.  To use them, run
 #+begin_src bash
@@ -50,5 +48,3 @@ This package supports:
 - org-file readmes by default
 - test coverage with coverage.py
 - pipenv integration
-
-This package

@@ -2,7 +2,6 @@
 {{ cookiecutter.package_name }} is {{ cookiecutter.project_description }}. 
 * Use
 * Requirements
-
 {% if cookiecutter.url and 'github' in cookiecutter.url %}
 * Installation
 ** From Github
@@ -20,8 +19,5 @@ git clone {{ cookiecutter.url }}
 cd {{ cookiecutter.package_name }}
 make dev
 #+end_src
-
-
-
 {% endif %}
 

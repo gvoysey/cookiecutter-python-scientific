@@ -1,40 +1,44 @@
 * Introduction
 This is a [[https://cookiecutter.readthedocs.io/][cookiecutter]] template that reflects my current understanding of best
-practices for making rapid python projects for scientific computing and research. 
+practices for making rapid python projects for scientific computing and research.
 
-Out of the box, this template will install a python 3.6+ package with numpy, attrs,
-and docopt installed for command line parsing.
+Out of the box, this template will install a python 3.6+ package with =numpy=, =attrs=,
+and either =docopt= or =click= installed for command line parsing.
+
 
 * Requirements
 
-This cookiecutter template expects you to have, and wish to use: 
+This cookiecutter template expects you to have, and wish to use:
 - python 3.6 or later
 - a system capable of running =make=
-- [[https://docs.pipenv.org/][=pipenv=]] for virtual environment management
-
+- [[https://docs.pipenv.org/][pipenv]] for virtual environment management
+- the [[https://cookiecutter.readthedocs.io/en/latest/][cookiecutter]] templating system.
 
 * Use
 To create a new project, run:
+
 #+begin_src bash
-OUTPUT_DIR=$HOME/Projects/my-new-project
-cookiecutter gh:gvoysey/cookiecutter-python-scientific -o $OUTPUT_DIR
+OUTPUT_DIR=.
+cookiecutter gh:gvoysey/cookiecutter-python-scientific -o $OUTPUT_DIR  #creates in the current working directory
 #+end_src
 
-and follow the prompts. =package_name= is required.
+and follow the prompts. The =package_name= option is required, and will be the name of
+your new python package (and created directory).
 
 Then, install the project as follows:
 #+begin_src bash
-cd $OUTPUT_DIR
+cd $OUTPUT_DIR/package_name
 make init
 #+end_src
+
 At this point, you can run =pipenv shell= to enter an activated virtual environment.  An entry point into your new python project has already been created -- using the value of =package_name= you created in the wizard, run =package_name --version= and note that while your new package doesn't do anything, it knows what version it is!
 
-Test runners with coverage have been preconfigured.  TO use them, run 
+Test runners with coverage have been preconfigured.  To use them, run
 #+begin_src bash
 make test
 #+end_src
 
-A linter suite has also been preconfigured.  TO use them, run 
+A linter suite has also been preconfigured.  To use them, run
 #+begin_src bash
 make lint
 #+end_src

@@ -1,10 +1,10 @@
 {
-    "package_name": "",
-    "project_tagline":"",
-    "project_description": "",
+    "package_name": "cookiecutter_science",
+    "project_tagline":"solving problems, taking names",
+    "project_description": "a tool for doing cool things",
     "full_name": "Graham Voysey",
     "email": "gvoysey@bu.edu",
-    "github_username": "gvoysey",
-    "url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.package_name }}.git",
+    "github_username": ["gvoysey", ""],
+    "url": ["https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.package_name }}.git","""],
     "cli_tool": ["docopt", "click", "none"]
 }

@@ -20,18 +20,14 @@ def main(inputargs=None):
     if inputargs is None:
         inputargs = sys.argv[1:] if len(sys.argv) > 1 else ""
     args = from_docopt(argv=inputargs, docstring=__doc__, version=__version__)
-{% elif cookiecutter.cli_tool == "click" %}
-import click
+{% elif cookiecutter.cli_tool == "click" %}import click
+from {{ cookiecutter.package_name }} import __version__
 
 @click.command()
+@click.version_option(version=__version__)
 def main():
     pass
 
 {% endif %}
 if __name__ == "__main__":
     main()
-
-
-
-
-

@@ -5,19 +5,38 @@ import shlex
 pkg_name = '{{ cookiecutter.package_name }}'
 repo = '{{ cookiecutter.url }}'
 
+
 def clean_up_docopt():
-    # remove docopt-specific file
+    """If click is selected, remove docopt-specific files."""
     cli_tool = '{{ cookiecutter.cli_tool}}'
     if cli_tool != "docopt":
-        to_remove = Path.cwd()/pkg_name/'from_docopt.py'
+        to_remove = Path.cwd() / pkg_name / 'from_docopt.py'
         to_remove.unlink()
 
-def init_project():
-    """Initialize a repo"""
+
+def set_markup_style():
+    """Use either markdown or org-mode as the default markup language."""
+    markup_language = '{{ cookiecutter.markup_language }}'
+    if markup_language == "org":
+        to_remove = Path.cwd() / 'README.md'
+        to_remove.unlink()
+    elif markup_language == "markdown":
+        to_remove = Path.cwd() / 'README.org'
+        to_remove.unlink()
+
+
+def install_deps():
+    """Install dependencies with pipenv"""
+    pipenv_dev = run('pipenv install --dev'.split(), check=True)
+    print('Installed dependencies and virtual environment. Type `pipenv shell` to activate later.')
+
+def install_black():
+    pass
+
+def init_repo():
+    """Initialize a git repository for this project."""
     print(f"Initializing development environment for {pkg_name}")
     try:
-        pipenv_dev = run('pipenv install --dev'.split(), check=True)
-        print('Installed dependencies, created virtualenv.')
         git_init = run('git init .'.split(), check=True)
         print('Initialized git repository')
         if repo:
@@ -38,9 +57,15 @@ def init_project():
     except CalledProcessError as e:
         print(e)
 
+
 def main():
     clean_up_docopt()
-    init_project()
+    set_markup_style()
+
+    install_deps()
+    init_repo()
+    install_black()
+
 
 if __name__ == "__main__":
     main()

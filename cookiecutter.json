@@ -6,5 +6,8 @@
     "email": "gvoysey@bu.edu",
     "github_username": "gvoysey",
     "url": ["https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.package_name }}.git",""],
-    "cli_tool": ["docopt", "click", "none"]
+    "cli_tool": ["docopt", "click", "none"],
+    "markup_language": ["org", "markdown"],
+    "formatter": ["black", "none"],
+    "install_precommit_hooks": ["yes", "no"]
 }

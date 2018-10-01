@@ -22,4 +22,5 @@ pycodestyle = "*"
 pydocstyle = "*"
 coverage = "*"
 pytest-cov = "*"
-
+black = "*"
+pre-commit = "*"

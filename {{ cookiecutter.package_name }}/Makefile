@@ -22,7 +22,7 @@ lint :
 	@echo "======== PYDOCSTYLE  ======="
 	@pipenv run pydocstyle {{ cookiecutter.package_name }}
 
-clean:
+remove:
 	@echo "removing virtual environment..."
 	@pipenv --rm
 

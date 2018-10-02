@@ -27,11 +27,21 @@ def set_markup_style():
 
 def install_deps():
     """Install dependencies with pipenv"""
-    pipenv_dev = run('pipenv install --dev'.split(), check=True)
+    pipenv_dev = run('pipenv install --pre --dev'.split(), check=True)
     print('Installed dependencies and virtual environment. Type `pipenv shell` to activate later.')
 
+
 def install_black():
-    pass
+    formatter = "{{ cookiecutter.formatter }}"
+    do_install = "{{ cookiecutter.install_precommit_hooks }}"
+    if formatter == "black" and do_install == "yes":
+        run('pipenv run pre-commit install'.split(), check=True)
+        print('installed black as a pre-commit hook.')
+    if formatter != "black":
+        run('pipenv uninstall black'.split(), check=True)
+    if do_install == "no":
+        run('pipenv uninstall pre-commit'.split(), check=True)
+
 
 def init_repo():
     """Initialize a git repository for this project."""

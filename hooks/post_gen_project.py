@@ -74,7 +74,7 @@ def main():
 
     install_deps()
     init_repo()
-    install_black()
+#    install_black()
 
 
 if __name__ == "__main__":

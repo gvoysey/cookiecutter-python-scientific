@@ -7,5 +7,5 @@
     "github_username": "gvoysey",
     "url": ["https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.package_name }}.git",""],
     "cli_tool": ["docopt", "click", "none"],
-    "markup_language": ["org", "markdown"],
+    "markup_language": ["org", "markdown"]
 }

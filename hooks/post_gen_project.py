@@ -27,7 +27,7 @@ def set_markup_style():
 
 def install_deps():
     """Install dependencies with pipenv"""
-    pipenv_dev = run('pipenv install --pre --dev'.split(), check=True)
+    pipenv_dev = run('pipenv install --dev'.split(), check=True)
     print('Installed dependencies and virtual environment. Type `pipenv shell` to activate later.')
 
 

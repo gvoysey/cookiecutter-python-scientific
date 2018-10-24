@@ -1,6 +1,6 @@
 * PR
 I presented this project at the Boston Python User Group on 23 Oct 2018.  My slides
-for that talk are [[https://github.com/gvoysey/talks/blob/master/python%2520for%2520reproducable%2520research/boston_python_reproducable.pdfhttps://github.com/gvoysey/talks/blob/master/python%2520for%2520reproducable%2520research/boston_python_reproducable.pdf][here]]. 
+for that talk are [[https://github.com/gvoysey/talks/blob/master/python%2520for%2520reproducable%2520research/boston_python_reproducable.pdf][here]]. 
 * Introduction
 This is a [[https://cookiecutter.readthedocs.io/][cookiecutter]] template that reflects my current understanding of best
 practices for making rapid python projects for scientific computing and research.
